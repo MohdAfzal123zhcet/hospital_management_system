@@ -1,9 +1,9 @@
 package com.example.hospital.management.system;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+
 @RestController
 @RequestMapping("/nurse")
 public class NurseController {
@@ -15,5 +15,17 @@ public class NurseController {
    String ans=nurseService.addNurse(nurse);
    return ans;
 }
+@GetMapping("/getbyAge")
+    public ArrayList<Nurse> getlistofnursegreaterthanage(@RequestParam("age")Integer age)
+    {
+        ArrayList<Nurse> nurse=nurseService.getListofnursegreaterthan(age);
+        return nurse;
 
+     }
+     @GetMapping("/getByQualification")
+    public ArrayList<Nurse>getNurseByQualification(@RequestParam("Qualification") String qualification)
+     {
+         ArrayList<Nurse>n=nurseService.getNurseByQualification(qualification);
+                 return n;
+     }
 }
