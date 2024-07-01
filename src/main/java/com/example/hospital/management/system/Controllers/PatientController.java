@@ -1,5 +1,6 @@
-package com.example.hospital.management.system;
+package com.example.hospital.management.system.Controllers;
 
+import com.example.hospital.management.system.Models.Patient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
@@ -7,7 +8,7 @@ import java.util.*;
 @RequestMapping("/patient")
 public class PatientController
 {
-    HashMap<Integer,Patient>patientDb=new HashMap<>();
+    HashMap<Integer, Patient>patientDb=new HashMap<>();
 
 @PostMapping("/addPatient")
 public String addPatient(@RequestParam("patientId")Integer PatientId, @RequestParam("name")String name,@RequestParam("disease")String disease,@RequestParam("age")Integer age)

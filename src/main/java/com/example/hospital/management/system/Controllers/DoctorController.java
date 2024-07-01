@@ -1,5 +1,6 @@
-package com.example.hospital.management.system;
+package com.example.hospital.management.system.Controllers;
 
+import com.example.hospital.management.system.Models.Doctor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +11,7 @@ import java.util.HashMap;
 @RequestMapping("/doctor")
 public class DoctorController {
 
-    HashMap<Integer,Doctor>hashmap=new HashMap<>();
+    HashMap<Integer, Doctor>hashmap=new HashMap<>();
     @PostMapping("/add")
     public String addDoctor(@RequestBody Doctor doctor)
         {

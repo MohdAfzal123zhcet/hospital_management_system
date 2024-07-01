@@ -1,5 +1,6 @@
-package com.example.hospital.management.system;
+package com.example.hospital.management.system.Repository;
 
+import com.example.hospital.management.system.Models.Nurse;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import java.util.HashMap;
 public class NurseRepository {
 
     //this is a class that will contain the data base(hashmap,mysql);
-    HashMap<Integer,Nurse>hashmap=new HashMap<>();
+    HashMap<Integer, Nurse>hashmap=new HashMap<>();
     public String addNurse(Nurse nurse)
     {
       int key=nurse.getNurseid();

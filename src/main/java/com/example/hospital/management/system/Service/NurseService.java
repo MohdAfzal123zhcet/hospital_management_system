@@ -1,6 +1,8 @@
-package com.example.hospital.management.system;
+package com.example.hospital.management.system.Service;
 
 
+import com.example.hospital.management.system.Models.Nurse;
+import com.example.hospital.management.system.Repository.NurseRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
